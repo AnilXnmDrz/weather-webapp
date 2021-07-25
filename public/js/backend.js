@@ -24,6 +24,8 @@ submit_location = () => {
         success.textContent=text2display
         error.textContent=''
       }
-    });
+    }).catch((e)=>{
+      console.log(e);
+    })
   });
 };
