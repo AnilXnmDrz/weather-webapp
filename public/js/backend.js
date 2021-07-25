@@ -10,7 +10,7 @@ submit_location = () => {
 
   console.log("btn", location);
 
-  fetch("http://localhost:3000/weather?location=" + location).then((response) => {
+  fetch("/weather?location=" + location).then((response) => {
     response.json().then((data) => {
       console.log("received",data);
       if(data.error){

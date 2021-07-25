@@ -1,6 +1,4 @@
-const request = require("request");
-const Logger =require('/home/anil/Desktop/node-js/note-app/logger/mylogger')
-const fs= require('fs')
+
 const forcast = (location, callback) => {
   // const logger=new Logger()
 
