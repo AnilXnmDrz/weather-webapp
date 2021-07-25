@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="icon" href="/webServer/public/images/weather.png">
+    <link rel="stylesheet"  href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    {{>header}}
+
+    <hr>
+    <input type="text" placeholder="enter location"> 
+    <button onclick="submit_location()" >search</button>     {{!-- <img src="./images/peacock.jpg" alt="peacock" height="100px" width="100px"> --}}
+    <p id="error"> </p>
+    <p id="success"></p>
+
+    {{>footer}}
+</body>
+    <script src="./js/backend.js"></script>
+    
+
+</html>
