@@ -2,7 +2,7 @@
 const hbs = require("hbs");
 const path = require("path");
 const forecast = require("./utils.js");
-const port= process.env.PORT|| 3000
+const port= process.env.PORT || 3000
 
 const express = require("express");
 const app = express();
@@ -62,5 +62,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`server is up at port ${port} ---CTRL+C to exit\n....`);
+  console.log("server is up at port"+ port );
 });
