@@ -15,7 +15,6 @@ const submit_location = () => {
       console.log("received",data);
       if(data.error){
           errormsg.textContent=data.error
- 
           success.textContent=''
       }
       else{
