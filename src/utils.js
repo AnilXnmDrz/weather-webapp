@@ -7,13 +7,13 @@ const forcast = (location, callback) => {
     "http://api.weatherstack.com/current?access_key=aa5f90eb7f7e65339a91d615848efa8b&query=" +
     location;
 
-  request({ url, json: true }, (error, { body } = response) => {
+  request({ url, json: true }, (error, { body } ) => {
     if (error) {
       // logger.error("unable to connect", error)
       callback("unable to connect", undefined);
     } else if (body.error) {
       // logger.error("bad request",body.error.code,body.error.info)
-      callback("cannot find location, error code");
+      callback("cannot find location",undefined);
     } else {
       callback(undefined, {
         temperature: body.current.temperature,
