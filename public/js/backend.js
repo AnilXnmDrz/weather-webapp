@@ -1,10 +1,10 @@
 
-console.log("web page loaded");
+// console.log("web page loaded");
 
-submit_location = () => {
-  var location = document.querySelector("input").value;
-  var error=document.querySelector('#error')
-  var success=document.querySelector('#success')
+const submit_location = () => {
+  const location = document.querySelector("input").value;
+  const errormsg=document.querySelector('#error')
+  const success=document.querySelector('#success')
   error.textContent=''
   success.textContent='loading...'
 
@@ -14,15 +14,15 @@ submit_location = () => {
     response.json().then((data) => {
       console.log("received",data);
       if(data.error){
-          error.textContent=data.error
-          console.log("err exec");
+          errormsg.textContent=data.error
+ 
           success.textContent=''
       }
       else{
-          console.log(data.temperature);
+          // console.log(data.temperature);
           let text2display=`${location} current temperature is ${data.temperature} degree ,feels like ${data.feelslike}, ${data.weather}`
         success.textContent=text2display
-        error.textContent=''
+        errormsg.textContent=''
       }
     })
   });
